@@ -114,6 +114,7 @@ def definir_la_cle(texte):  #l'occurence la plus frequente dans un texte est nor
     return cle
 
 def décalement(lettre_crypter, decalage) : #retrouve le caractere décalé
+    
     nb = ord(lettre_crypter)
     lettre_cherchee = chr(nb + decalage)
     
@@ -151,7 +152,7 @@ def dechiffrement_cesar(chaine) :
     
     return texte
     
-
+#print(dechiffrement_cesar(message))
         
 
 ###################################
@@ -185,5 +186,36 @@ def dechiffrement_cesar(chaine,cle):
 print(dechiffrement_cesar('a',))
 
 """
+###############################
+###############################
+
+
+def separation(chaine) :    #decrypatage message 4.
+   
+    chaine1 = ''
+    chaine2 = ''
+    chaine_final = ''
+   
+    
+    for i in range(len(chaine)) :
+        
+        if i%2 == 0:
+            chaine1 += chaine[i]
+        else : 
+            chaine2 += chaine[i]
+            
+ 
+    chaine1_dech = dechiffrement_cesar(chaine1)
+    chaine2_dech = dechiffrement_cesar(chaine2)
+    
+    
+    for i in range(len(chaine1_dech)):
+        chaine_final += chaine1_dech[i] + chaine2_dech[i]
+    return chaine_final
+        
+ 
+##################################
+##################################
+
 
 
