@@ -46,8 +46,12 @@ z = ord('z')
 
 with open('message3.txt', 'r', encoding = 'utf8') as f:
    message = f.read()
-    
    
+with open('message2.txt', 'r', encoding = 'utf8') as f:
+   message1 = f.read()
+    
+with open('message4.txt', 'r', encoding = 'utf8') as f:
+   message2 = f.read()   
     
 def cesar_chiffre_nb(x,k):
     """
@@ -144,7 +148,7 @@ def chiff_cesar(texte,k):
     return (message)
         """
 
-
+############ DECHIFFREMENT CESAR MESSAGE 2 ET 3
 def dechiffrement_cesar(chaine) : 
     
     cesar_key = definir_la_cle(chaine)
@@ -152,8 +156,8 @@ def dechiffrement_cesar(chaine) :
     
     return texte
     
-#print(dechiffrement_cesar(message))
-        
+print(dechiffrement_cesar(message))
+print(dechiffrement_cesar(message1))       
 
 ###################################
 ###################################
@@ -186,7 +190,7 @@ def dechiffrement_cesar(chaine,cle):
 print(dechiffrement_cesar('a',))
 
 """
-###############################
+##############################
 ###############################
 
 
@@ -213,7 +217,8 @@ def separation(chaine) :    #decrypatage message 4.
         chaine_final += chaine1_dech[i] + chaine2_dech[i]
     return chaine_final
         
- 
+print(separation(message2))
+
 ##################################
 ##################################
 
